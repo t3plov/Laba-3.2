@@ -25,7 +25,12 @@ int main()
 
 		cout << "Введите порядковый номер буквы слова: " << endl;
 		cin >> num_of_word;
-
+		
+		if (cin.fail() || cin.peek != '\n')
+		{
+			throw ("Порядковый номер должен быть целым положительным числом!")
+		}
+		
 		int num_of_word_total = num_of_word - 1;
 
 		if (num_of_word_total > Word.length())
